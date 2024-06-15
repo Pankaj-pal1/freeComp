@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'login_screen.dart';
+
 class MyCustomSplashScreen extends StatefulWidget {
   @override
   _MyCustomSplashScreenState createState() => _MyCustomSplashScreenState();
@@ -48,10 +50,10 @@ class _MyCustomSplashScreenState extends State<MyCustomSplashScreen>
       });
     });
 
-    Timer(Duration(seconds: 4), () {
-      // setState(() {
-      //   Navigator.pushReplacement(context, PageTransition(SecondPage()));
-      // });
+    Timer(Duration(seconds: 6), () {
+      setState(() {
+        firstNavigation();
+      });
     });
   }
 
@@ -134,6 +136,10 @@ class _MyCustomSplashScreenState extends State<MyCustomSplashScreen>
       ),
     );
   }
+
+  void firstNavigation() {
+    Navigator.pushReplacement(context, PageTransition(LoginScreen()));
+  }
 }
 
 class PageTransition extends PageRouteBuilder {
@@ -160,26 +166,7 @@ class PageTransition extends PageRouteBuilder {
   );
 }
 
-class SecondPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        centerTitle: true,
-        title: Text(
-          'Test',
-          style: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-            fontSize: 20,
-          ),
-        ), systemOverlayStyle: SystemUiOverlayStyle.light,
-      ),
-    );
-  }
-}
+
 
 
 
