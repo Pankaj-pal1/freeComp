@@ -47,6 +47,7 @@ dependencies:
   sizer: ^2.0.15
   google_fonts: ^4.0.4
   animated_text_kit:
+  toastification: ^2.0.0
 
 
   # The following adds the Cupertino Icons font to your application.
