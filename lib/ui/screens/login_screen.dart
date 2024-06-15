@@ -47,7 +47,6 @@ class _LoginScreenState extends State<LoginScreen> {
                   height: 5.h,
                 ),
                 Container(
-
                   child: Center(
                     child: Text(
                         "Login",
