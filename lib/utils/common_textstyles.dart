@@ -1,22 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-
-appbarTextStyle() {
-  return const TextStyle(
-    color: Colors.black,
-    fontSize: 15,
-    fontWeight: FontWeight.w500,
-  );
-}
-
 TextFieldTextStyle() {
   return const TextStyle(
-    fontSize: 18,
+    fontSize: 15,
     fontWeight: FontWeight.bold,
     fontStyle: FontStyle.normal,
     color: Colors.white,
   );
+}
+
+ButtonTextStyle(){
+  return
+  GoogleFonts.lato(
+      fontSize: 14, color: Colors.white, fontWeight: FontWeight.bold);
 }
 
 TextFieldLabelStyle() {
