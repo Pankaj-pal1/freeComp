@@ -57,7 +57,6 @@ class _LoginScreenState extends State<LoginScreen> {
                     InkWell(
                       onTap: (){
                         toastification.show(
-
                           type: ToastificationType.success,
                           style: ToastificationStyle.flat,
                           autoCloseDuration: const Duration(seconds: 3),
@@ -109,7 +108,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         child: Center(
                           child: Text(
                               "Login",
-                              style: ButtonTextStyle()
+                              style: blackButtonTextStyle()
                           ),
                         ),
                       ),
