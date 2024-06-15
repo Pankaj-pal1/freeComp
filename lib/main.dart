@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:freecomp/ui/screens/splash_screen.dart';
 import 'package:freecomp/ui/widgets/noInternetWidget.dart';
 import 'package:sizer/sizer.dart';
 
@@ -38,10 +39,11 @@ class MyApp extends StatelessWidget {
             debugShowCheckedModeBanner: false,
             title: 'Flutter Demo',
             theme: ThemeData(
-              colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+              colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
+              appBarTheme: const AppBarTheme(color: Colors.black,),
               useMaterial3: true,
             ),
-            home: const MyHomePage(title: 'Flutter Demo Home Page'),
+            home:  MyCustomSplashScreen(),
           ),
         ),
       );
@@ -59,7 +61,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   void initState() {
     getIt<InternetCheckerCubit>().checkConnectivityStatus();
@@ -87,8 +88,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   Text(
                     'You have pushed the button this many times:',
                   ),
-
-
                 ],
               ),
             );

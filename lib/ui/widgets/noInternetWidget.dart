@@ -67,7 +67,7 @@ class _NoInternetAnimationState extends State<NoInternetAnimation>
               height: 5.h,
             ),
             const Text(
-              'Seems your connection Lost !',
+              'Seems your connection is lost !',
               style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
