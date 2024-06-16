@@ -1,12 +1,11 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sizer/sizer.dart';
-import 'package:toastification/toastification.dart';
+
 import '../../bloc/login_bloc/login_bloc_cubit.dart';
 import '../../data/services/get_it_service.dart';
 import '../../utils/common_textstyles.dart';
-import '../../utils/customToasts.dart';
 import '../../utils/custominputDecoration.dart';
 import '../widgets/loadingWidget.dart';
 
@@ -18,10 +17,7 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  @override
-  void initState() {
-    super.initState();
-  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -70,9 +66,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                     borderRadius: const BorderRadius.all(
                                         Radius.circular(8))),
                                 child: TextFormField(
-                                  maxLength: 10,
-                                    controller:
-                                        getIt<LoginBlocCubit>().mobileNumber,
+                                    maxLength: 10,
+                                    controller: getIt<LoginBlocCubit>().mobileNumber,
                                     cursorColor: Colors.white,
                                     keyboardType: TextInputType.phone,
                                     style: TextFieldTextStyle(),
@@ -86,8 +81,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               ),
                               InkWell(
                                 onTap: () {
-                                  getIt<LoginBlocCubit>()
-                                      .validateMobileNumberAndCallApi();
+                                  getIt<LoginBlocCubit>().validateMobileNumberAndCallApi(context);
                                 },
                                 child: Container(
                                   decoration: BoxDecoration(
@@ -97,7 +91,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   height: 5.h,
                                   child: Center(
                                     child: state.isLoading
-                                        ? cutomLoaderWidget()
+                                        ? cutomLoaderWhiteWidget()
                                         : Text("Login",
                                             style: ButtonTextStyle()),
                                   ),

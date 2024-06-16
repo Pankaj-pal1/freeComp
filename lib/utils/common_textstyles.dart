@@ -14,7 +14,7 @@ ButtonTextStyle() {
   return GoogleFonts.lato(
       fontSize: 14, color: Colors.white, fontWeight: FontWeight.bold);
 }
-whiteButtonTextStyle(){
+BlackButtonTextStyle(){
   return
   GoogleFonts.lato(
       fontSize: 14, color: Colors.black, fontWeight: FontWeight.bold);

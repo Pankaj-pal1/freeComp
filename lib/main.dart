@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freecomp/ui/screens/pinCodeVerificationScreen.dart';
+import 'package:freecomp/ui/screens/splash_screen.dart';
 import 'package:freecomp/ui/widgets/noInternetWidget.dart';
 import 'package:sizer/sizer.dart';
 import 'package:toastification/toastification.dart';
@@ -44,7 +45,7 @@ class MyApp extends StatelessWidget {
                 appBarTheme: const AppBarTheme(color: Colors.black,),
                 useMaterial3: true,
               ),
-              home:  PinCodeVerificationScreen(),
+              home:  MyCustomSplashScreen(),
             ),
           ),
         ),
