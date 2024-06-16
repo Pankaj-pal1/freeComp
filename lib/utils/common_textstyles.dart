@@ -10,33 +10,42 @@ TextFieldTextStyle() {
   );
 }
 
-ButtonTextStyle(){
-  return
-  GoogleFonts.lato(
+ButtonTextStyle() {
+  return GoogleFonts.lato(
       fontSize: 14, color: Colors.white, fontWeight: FontWeight.bold);
+}
+
+ToastHeadingSuccessStyle() {
+  return GoogleFonts.lato(
+      fontSize: 18, color: Colors.green, fontWeight: FontWeight.bold);
+}
+
+ToastHeadingErrorStyle() {
+  return GoogleFonts.lato(
+      fontSize: 18, color: Colors.red, fontWeight: FontWeight.bold);
+}
+
+ToastSubHeadingStyle() {
+  return GoogleFonts.lato(
+      fontSize: 12, color: Colors.black, fontWeight: FontWeight.bold);
 }
 
 TextFieldLabelStyle() {
   return GoogleFonts.lato(
       fontSize: 16, color: Colors.white, fontWeight: FontWeight.w400);
 }
-appbarTabSmallTextStyle() {
+
+TextStyle18Bold() {
   return GoogleFonts.lato(
-      fontSize: 12, color: Colors.white, fontWeight: FontWeight.w400);
+      fontSize: 18, color: Colors.black, fontWeight: FontWeight.bold,);
 }
 
-greyTextStyleBlack16(){
-  return
-    GoogleFonts.lato(
-        fontSize: 14, color: Colors.black, fontWeight: FontWeight.bold);
-}
-greyTextStyleBGrey14(){
-  return
-    GoogleFonts.lato(
-        fontSize: 14, color: Colors.grey, fontWeight: FontWeight.bold);
+greyTextStyleBlack16() {
+  return GoogleFonts.lato(
+      fontSize: 14, color: Colors.black, fontWeight: FontWeight.bold);
 }
 
-
-
-
-
+greyTextStyleBGrey14() {
+  return GoogleFonts.lato(
+      fontSize: 14, color: Colors.grey, fontWeight: FontWeight.bold);
+}
