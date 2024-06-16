@@ -14,6 +14,11 @@ ButtonTextStyle() {
   return GoogleFonts.lato(
       fontSize: 14, color: Colors.white, fontWeight: FontWeight.bold);
 }
+whiteButtonTextStyle(){
+  return
+  GoogleFonts.lato(
+      fontSize: 14, color: Colors.black, fontWeight: FontWeight.bold);
+}
 
 ToastHeadingSuccessStyle() {
   return GoogleFonts.lato(
@@ -49,3 +54,19 @@ greyTextStyleBGrey14() {
   return GoogleFonts.lato(
       fontSize: 14, color: Colors.grey, fontWeight: FontWeight.bold);
 }
+blackTextStyleBlack20(){
+  return
+    GoogleFonts.lato(
+        fontSize: 20, color: Colors.grey, fontWeight: FontWeight.bold);
+}
+whiteTextStyleBWhite24(){
+  return
+    GoogleFonts.lato(
+        fontSize:24, color: Colors.white, fontWeight: FontWeight.bold);
+}
+whiteTextStyleBWhite12(){
+  return
+    GoogleFonts.lato(
+        fontSize:14, color: Colors.white, fontWeight: FontWeight.bold);
+}
+

@@ -25,7 +25,8 @@ class _MyCustomSplashScreenState extends State<MyCustomSplashScreen>
   void initState() {
     super.initState();
 
-    _controller = AnimationController(vsync: this, duration: Duration(seconds: 3));
+    _controller =
+        AnimationController(vsync: this, duration: Duration(seconds: 3));
 
     animation1 = Tween<double>(begin: 40, end: 20).animate(CurvedAnimation(
         parent: _controller, curve: Curves.fastLinearToSlowEaseIn))
@@ -75,11 +76,10 @@ class _MyCustomSplashScreenState extends State<MyCustomSplashScreen>
           Column(
             children: [
               AnimatedContainer(
-                color: Colors.black,
+                  color: Colors.black,
                   duration: Duration(milliseconds: 2000),
                   curve: Curves.fastLinearToSlowEaseIn,
-                  height: _height / _fontSize
-              ),
+                  height: _height / _fontSize),
               AnimatedOpacity(
                 duration: Duration(milliseconds: 1000),
                 opacity: _textOpacity,
@@ -88,26 +88,30 @@ class _MyCustomSplashScreenState extends State<MyCustomSplashScreen>
                     Text(
                       'FreeComp.',
                       style: GoogleFonts.lato(
-                        fontSize: 24, color: Colors.white, fontWeight: FontWeight.w800,),
+                        fontSize: 24,
+                        color: Colors.white,
+                        fontWeight: FontWeight.w800,
+                      ),
                     ),
-                    if( _fontSize == 1.6)...[
+                    if (_fontSize == 1.6) ...[
                       AnimatedTextKit(
                         animatedTexts: [
                           TypewriterAnimatedText(
                             'Get rid of all Reimbursements.',
                             speed: Duration(milliseconds: 150),
                             textStyle: GoogleFonts.lato(
-                              fontSize: 12, color: Colors.white, fontWeight: FontWeight.w500,),
+                              fontSize: 12,
+                              color: Colors.white,
+                              fontWeight: FontWeight.w500,
+                            ),
                           ),
                         ],
                         isRepeatingAnimation: true,
                         repeatForever: true,
                         displayFullTextOnTap: false,
                         stopPauseOnTap: false,
-                      )
-                    ]
-
-
+                      ),
+                    ],
                   ],
                 ),
               ),
@@ -128,7 +132,9 @@ class _MyCustomSplashScreenState extends State<MyCustomSplashScreen>
                   color: Colors.black,
                   borderRadius: BorderRadius.circular(30),
                 ),
-                child: Center(child: Image.asset("assets/images/icon_logo_black.png"),),
+                child: Center(
+                  child: Image.asset("assets/images/icon_logo_black.png"),
+                ),
               ),
             ),
           ),
@@ -147,27 +153,21 @@ class PageTransition extends PageRouteBuilder {
 
   PageTransition(this.page)
       : super(
-    pageBuilder: (context, animation, anotherAnimation) => page,
-    transitionDuration: Duration(milliseconds: 2000),
-    transitionsBuilder: (context, animation, anotherAnimation, child) {
-      animation = CurvedAnimation(
-        curve: Curves.fastLinearToSlowEaseIn,
-        parent: animation,
-      );
-      return Align(
-        alignment: Alignment.bottomCenter,
-        child: SizeTransition(
-          sizeFactor: animation,
-          child: page,
-          axisAlignment: 0,
-        ),
-      );
-    },
-  );
+          pageBuilder: (context, animation, anotherAnimation) => page,
+          transitionDuration: Duration(milliseconds: 2000),
+          transitionsBuilder: (context, animation, anotherAnimation, child) {
+            animation = CurvedAnimation(
+              curve: Curves.fastLinearToSlowEaseIn,
+              parent: animation,
+            );
+            return Align(
+              alignment: Alignment.bottomCenter,
+              child: SizeTransition(
+                sizeFactor: animation,
+                child: page,
+                axisAlignment: 0,
+              ),
+            );
+          },
+        );
 }
-
-
-
-
-
-
